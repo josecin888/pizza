@@ -1,3 +1,42 @@
-body{font-family: 'Courier New', monospace;
-      background-color: coral;
-}
+ :root{--accent:#000000;--bg:#ff9c6e;--muted:#666}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#222}
+        
+        header,footer,main,nav,section{display:block}
+        header{background:#c48c84;padding:1rem 1.25rem;border-bottom:1px solid #000000;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+        
+        .branding{display:flex;align-items:center;gap:.75rem}
+        .branding img{height:56px;width:auto;display:block}
+        
+        nav a{margin-left:.75rem;text-decoration:none;color:var(--muted);font-weight:600}
+        
+        .hero{padding:2.5rem 1.25rem;text-align:center;background:linear-gradient(90deg,rgba(194, 59, 44, 0.06),transparent);border-bottom:1px solid #964841}
+        .hero h1{margin:.25rem 0;font-size:1.75rem;color:var(--accent)}
+        
+        .grid{display:grid;gap:1rem;padding:1.25rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+        
+        .card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.04);border:1px solid #7c514d;display:flex;flex-direction:column}
+        
+        /* Estilo para las nuevas imágenes de las pizzas */
+        .pizza-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            background-color: #ff662a; /* Color de fondo si no carga la imagen */
+        }
+
+        .pizza-title{font-weight:700;margin:.25rem 0}
+        .muted{color:var(--muted);font-size:.95rem}
+        .price{margin-top:auto;padding-top:0.5rem;font-weight:700;color:var(--accent)}
+
+        footer{padding:1rem 1.25rem;text-align:center;font-size:.9rem;color:var(--muted);border-top:1px solid #d67e7e;background:#911818}
+        
+        .contact{max-width:720px;margin:1rem auto}
+        .contact form{display:grid;gap:.5rem}
+        
+        .btn{background:var(--accent);color:#af5b5b;border:none;padding:.5rem .75rem;border-radius:6px;cursor:pointer}
+        input,textarea{width:100%;padding:.5rem;border:1px solid #a13232;border-radius:6px;font-size:1rem}
+        
+        @media(min-width:720px){.hero{padding:3rem 2rem}.hero h1{font-size:2.2rem}}
