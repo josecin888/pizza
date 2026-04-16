@@ -1,3 +1,4 @@
+ /* Tema: piel y narajo */
  :root{--accent:#000000;--bg:#ffd2be;--muted:#666}
         *{box-sizing:border-box}
         body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#000000}
