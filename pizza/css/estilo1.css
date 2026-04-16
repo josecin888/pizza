@@ -17,7 +17,7 @@
         
         .card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.04);border:1px solid #000000;display:flex;flex-direction:column}
         
-        /* Estilo para las nuevas imágenes de las pizzas */
+        /* Estilo para  imágenes de las pizzas */
         .pizza-img {
             width: 100%;
             height: 160px;
@@ -49,23 +49,23 @@
 
         .promo-container {
             position: relative;
-            max-width: 1000px; /* Ancho máximo para que no se vea gigante en PC */
+            max-width: 1000px;
             margin: 0 auto;
             overflow: hidden;
             border-radius: 12px;
-            border: 2px solid var(--accent);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid var(--border);
+            box-shadow: 0 4px 10px var(--shadow);
+            background: var(--card);
         }
 
         .promo-img {
             width: 100%;
-            height: 250px; /* Altura fija para el banner */
-            object-fit: cover; /* Evita que la imagen se deforme */
+            height: 360px;
+            object-fit: cover;
             display: block;
             transition: transform 0.5s ease;
         }
 
-        /* Efecto visual al pasar el mouse */
         .promo-container:hover .promo-img {
             transform: scale(1.05);
         }
@@ -76,36 +76,31 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6));
+            background: linear-gradient(rgba(6,38,61,0.05), rgba(6,38,61,0.45));
             display: flex;
             align-items: flex-end;
             padding: 1.5rem;
         }
 
         .promo-tag {
-            background: #e63946; /* Un rojo llamativo para la oferta */
-            color: white;
+            background: var(--accent-2);
+            color: #06263d;
             padding: 0.5rem 1rem;
             font-weight: 800;
             border-radius: 4px;
             letter-spacing: 1px;
-            box-shadow: 2px 2px 0px #000;
+            box-shadow: 2px 2px 0px rgba(6,38,61,0.08);
             animation: pulse 2s infinite;
         }
 
-        /* Animación opcional para llamar la atención */
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.04); }
             100% { transform: scale(1); }
         }
 
-        /* Ajuste para móviles */
+        /* Ajustes para móviles */
         @media (max-width: 480px) {
-            .promo-img {
-                height: 180px;
-            }
-            .promo-tag {
-                font-size: 0.8rem;
-            }
+            .promo-img { height: 260px; }
+            .promo-tag { font-size: 0.85rem; }
         }

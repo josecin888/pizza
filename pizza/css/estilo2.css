@@ -1,6 +1,68 @@
 /* filepath: c:\Users\alumnoslgr\Downloads\pizza\pizza\css\estilo2.css */
 /* Tema: azules y amarillos */
+/* Sección de oferta (adaptada al tema azul/amarillo) */
+.promo-banner {
+    padding: 0 1.25rem;
+    margin: 1.5rem 0;
+}
 
+.promo-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    box-shadow: 0 4px 10px var(--shadow);
+    background: var(--card);
+}
+
+.promo-img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.promo-container:hover .promo-img {
+    transform: scale(1.05);
+}
+
+.promo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(6,38,61,0.05), rgba(6,38,61,0.45));
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.promo-tag {
+    background: var(--accent-2);
+    color: #06263d;
+    padding: 0.5rem 1rem;
+    font-weight: 800;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    box-shadow: 2px 2px 0px rgba(6,38,61,0.08);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+    100% { transform: scale(1); }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+    .promo-img { height: 260px; }
+    .promo-tag { font-size: 0.85rem; }
+}
 :root{
     --accent:#0b5ed7;      /* azul principal */
     --accent-2:#ffd43b;    /* amarillo secundario */
