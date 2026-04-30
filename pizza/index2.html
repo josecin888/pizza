@@ -1,0 +1,143 @@
+<!doctype html>
+<!-- Registro: botón disparador, modal accesible y script -->
+<button id="openRegistro" class="btn" type="button" aria-haspopup="dialog" aria-controls="registroModal" style="position:fixed;right:1rem;bottom:1rem;z-index:900;">Registro</button>
+
+<div id="registroModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="registroTitle">
+    <div class="modal-panel" role="document">
+        <button id="closeRegistro" class="modal-close" aria-label="Cerrar">✕</button>
+        <h2 id="registroTitle">Registro</h2>
+
+        <form id="registroForm" novalidate>
+            <input name="nombre" type="text" placeholder="Nombre completo" required>
+            <input name="telefono" type="tel" placeholder="Teléfono">
+            <input name="email" type="email" placeholder="Correo electrónico" required>
+            <input name="password" type="password" placeholder="Contraseña (opcional)">
+            <div class="actions">
+                <button id="cancelRegistro" type="button" class="btn secondary">Cancelar</button>
+                <button type="submit" class="btn">Registrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/app.js" defer></script>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pizzacap</title>
+    <link type="image/x-icon" rel="icon" href="img/pizza-logo-images-stock-vector.ico">
+    <link rel="stylesheet" href="css/estilo2.css">
+</head>
+<body>
+    <header>
+        <div class="branding">
+            <img src="img/logo.png" alt="Logotipo Pizzacap" onerror="this.style.display='none'">
+            <div>
+                <strong>Pizzacap</strong>
+                <div class="muted">Auténtica pizza artesanal</div>
+            </div>
+        </div>
+        <nav aria-label="Navegación principal">
+            <a href="#menu">Menú</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">Sabor que une a la familia</h1>
+            <p class="muted">Masa madre, ingredientes frescos y amor.</p>
+        </section>
+        <section class="promo-banner">
+            <div class="promo-container">
+                <img src="img/Oferta.png" alt="Oferta Especial Pizzacap" class="promo-img">
+                <div class="promo-overlay">
+                    <span class="promo-tag">¡OFERTA LIMITADA! 2x1!!</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="grid" aria-labelledby="menu-title">
+            <h2 id="menu-title" style="grid-column:1/-1;margin:0 0 .5rem">Menú destacado</h2>
+
+            <article class="card">
+                <img src="img/pizza-margarita-3684.jpg" alt="Pizza Margherita" class="pizza-img">
+                <div class="pizza-title">Margherita</div>
+                <div class="muted">Tomate San Marzano, mozzarella fresca, albahaca.</div>
+                <div class="price">$5.500</div>
+            </article>
+
+            <article class="card">
+                <img src="img/Pizza-peperonni-convertido-de-webp.jpeg" alt="Pizza Pepperoni" class="pizza-img">
+                <div class="pizza-title">Pepperoni</div>
+                <div class="muted">Salsa especial, mucho pepperoni crujiente.</div>
+                <div class="price">$6.500</div>
+            </article>
+
+            <article class="card">
+                <img src="img/Pizza-cuatro-quesos-convertido-de-webp.jpeg" alt="Pizza Cuatro Quesos" class="pizza-img">
+                <div class="pizza-title">Cuatro Quesos</div>
+                <div class="muted">Mozzarella, gorgonzola, parmesano y provolone.</div>
+                <div class="price">$7.000</div>
+            </article>
+
+            <article class="card">
+                <img src="img/hawaiana_1691158484_large.jpg" alt="Pizza Hawaiana" class="pizza-img">
+                <div class="pizza-title">Hawaiana</div>
+                <div class="muted">Jamón, piña y salsa de tomate suave.</div>
+                <div class="price">$6.000</div>
+            </article>
+
+            <article class="card">
+                <img src="img/Pizza_vegetariana.jpg" alt="Pizza Vegetariana" class="pizza-img">
+                <div class="pizza-title">Vegetariana</div>
+                <div class="muted">Berenjena, pimiento, champiñones y rúcula.</div>
+                <div class="price">$6.800</div>
+            </article>
+
+            <article class="card">
+                <img src="img/Pizza-prosciutto-convertido-de-webp.jpeg" alt="Pizza Prosciutto" class="pizza-img">
+                <div class="pizza-title">Prosciutto y Champiñones</div>
+                <div class="muted">Jamón crudo, champiñones frescos y aceite de oliva.</div>
+                <div class="price">$8.000</div>
+            </article>
+        </section>
+
+        <section id="sobre" class="card" style="margin:1rem" aria-labelledby="sobre-title">
+            <h2 id="sobre-title">Sobre nosotros</h2>
+            <p class="muted">Proyecto estudiantil de INACAP. Un sitio para compartir, entregar amor y felicidad mediate pizza de la mejor calidad</p>
+        </section>
+
+        <section id="contacto" class="card contact" aria-labelledby="contacto-title">
+            <h2 id="contacto-title">Reserva y contacto</h2>
+            <p class="muted">Llámanos o deja tu mensaje.</p>
+            <form action="#" method="post" aria-label="Formulario de contacto">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="tel" name="telefono" placeholder="Teléfono">
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <textarea name="mensaje" rows="4" placeholder="Mensaje"></textarea>
+                <button class="btn" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div>Pizzería Pizzacap — El Bosque — Tel: +56 9 76924325</div>
+        <div style="margin-top:.25rem">© <span id="year"></span> Todos los derechos reservados</div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Script para asegurar el nombre en todo el documento
+        (() => {
+            const name = 'Pizzacap';
+            document.title = name;
+            const logo = document.querySelector('.branding img');
+            if (logo) logo.alt = `Logotipo ${name}`;
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Registro</title>
+    <link rel="stylesheet" href="CSS/estilo2.css">
+</head>
+<body>
+    <form id="registroForm">
+        <h3>Registro de Usuario</h3>
+        <input type="text" id="nombre" placeholder="Nombre completo">
+        <input type="email" id="correo" placeholder="Correo electrónico">
+        <input type="text" id="direccion" placeholder="Dirección">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button type="submit">Registrarse</button>
+        <p id="mensaje"></p>
+    </form>
+    <script src="Js/app.js"></script>
+</body>
+</html>

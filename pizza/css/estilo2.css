@@ -202,3 +202,39 @@ a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(11,94,
     .hero{padding:3rem 2rem}
     .hero h1{font-size:2.2rem}
 }
+.modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,.5);
+    z-index: 1000;
+    padding: 1rem;
+}
+.modal[aria-hidden="true"] { display: none; }
+.modal-panel {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    padding: 1rem 1.25rem;
+    position: relative;
+}
+.modal-close {
+    position: absolute;
+    right: .5rem;
+    top: .25rem;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.modal h2 { margin: 0 0 .5rem; }
+.modal form { display: grid; gap:.5rem; margin-top:.25rem; }
+.modal input, .modal select, .modal textarea {
+    width:100%; padding:.5rem; border:1px solid #ccc; border-radius:4px; font:inherit;
+}
+.modal .actions { display:flex; gap:.5rem; justify-content:flex-end; margin-top:.25rem; }
+.modal .btn { padding:.5rem .75rem; cursor:pointer; border-radius:4px; border:none; background:#2b7a2b; color:#fff; }
+.modal .btn.secondary { background:#e0e0e0; color:#111; }

@@ -1,0 +1,101 @@
+/* filepath: c:\Users\alumnoslgr\Downloads\registro\CSS\estilo.css */
+
+:root{
+    --naranja: #ff6a00;
+    --plateado: #C0C0C0;
+    --blanco: #ffffff;
+    --input-border: #ffb88a;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+    height:100%;
+    margin:0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--plateado);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    color:#222;
+}
+
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+}
+
+#registroForm{
+    width:100%;
+    max-width:420px;
+    background: rgba(255,255,255,0.96);
+    border-radius:12px;
+    padding:28px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    border-top:6px solid var(--naranja);
+    text-align:center;
+}
+
+#registroForm h3{
+    margin:0 0 16px;
+    color:var(--naranja);
+    font-size:1.25rem;
+    letter-spacing:0.2px;
+}
+
+#registroForm input{
+    width:100%;
+    padding:12px 14px;
+    margin:8px 0;
+    border:1px solid var(--input-border);
+    border-radius:8px;
+    background:#fff;
+    font-size:0.95rem;
+    transition:box-shadow .12s, border-color .12s;
+}
+
+#registroForm input::placeholder{
+    color: rgba(0,0,0,0.35);
+}
+
+#registroForm input:focus{
+    outline:none;
+    border-color: var(--naranja);
+    box-shadow: 0 6px 18px rgba(255,106,0,0.10);
+}
+
+#registroForm button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background: linear-gradient(180deg,var(--naranja), #ff4d00);
+    color:var(--blanco);
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    font-size:1rem;
+    cursor:pointer;
+    box-shadow: 0 8px 18px rgba(255,106,0,0.18);
+    transition: transform .08s ease, filter .08s ease;
+}
+
+#registroForm button:active{ transform:translateY(1px); }
+#registroForm button:hover{ filter:brightness(.98); }
+
+#mensaje{
+    margin-top:12px;
+    min-height:1.2em;
+    font-size:0.95rem;
+    color:#333;
+}
+
+/* Utility states for mensajes */
+#mensaje.success{ color:#27ae60; }
+#mensaje.error{ color:#e74c3c; }
+
+/* Responsive */
+@media (max-width:380px){
+    #registroForm{ padding:18px; border-radius:10px; }
+    #registroForm h3{ font-size:1.1rem; }
+}
